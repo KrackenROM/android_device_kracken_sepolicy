@@ -1,6 +1,6 @@
 #
 # This policy configuration will be used by all products that
-# inherit from PA
+# inherit from Kracken
 #
 
 ifeq ($(TARGET_COPY_OUT_VENDOR), vendor)
@@ -10,17 +10,17 @@ endif
 endif
 
 BOARD_PLAT_PUBLIC_SEPOLICY_DIR += \
-    device/pa/sepolicy/common/public
+    device/kracken/sepolicy/common/public
 
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += \
-    device/pa/sepolicy/common/private
+    device/kracken/sepolicy/common/private
 
 ifeq ($(TARGET_USES_PREBUILT_VENDOR_SEPOLICY), true)
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += \
-    device/pa/sepolicy/common/dynamic \
-    device/pa/sepolicy/common/system-only
+    device/kracken/sepolicy/common/dynamic \
+    device/kracken/sepolicy/common/system-only
 else
 BOARD_SEPOLICY_DIRS += \
-    device/pa/sepolicy/common/dynamic \
-    device/pa/sepolicy/common/vendor
+    device/kracken/sepolicy/common/dynamic \
+    device/kracken/sepolicy/common/vendor
 endif

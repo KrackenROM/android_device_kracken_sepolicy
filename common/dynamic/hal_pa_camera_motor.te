@@ -1,5 +1,0 @@
-# HwBinder IPC from client to server
-binder_call(hal_pa_camera_motor_client, hal_pa_camera_motor_server)
-
-add_hwservice(hal_pa_camera_motor_server, hal_pa_camera_motor_hwservice)
-allow hal_pa_camera_motor_client hal_pa_camera_motor_hwservice:hwservice_manager find;
